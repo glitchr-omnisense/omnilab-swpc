@@ -37,7 +37,7 @@ arrays.
 The contract's `series()` takes a place and answers series at it. Of space weather, only the
 aurora is at a place: `series()` serves the variable `aurora` at a `Point` - the nearest cell of
 OVATION's grid (its latitude and longitude rounded to the degree, a west longitude read as 360
-minus it), one point at the nowcast's forecast time, `forecast` true, unit `%`. A period that does
+plus it: -147.72 is 212), one point at the nowcast's forecast time, `forecast` true, unit `%`. A period that does
 not hold that time gives a series without points (only the latest nowcast is published). A box,
 a station or another variable are refused before any call. `capabilities()`: `series`,
 `forecast`.
