@@ -1,0 +1,46 @@
+{
+    "name": "omnilab/swpc",
+    "type": "library",
+    "description": "Omnilab SWPC: NOAA's Space Weather Prediction Center - the probability of an aurora overhead at a point (OVATION's nowcast) as a series, and outside the contract, space weather not being at a place on the Earth, the planetary Kp index observed and predicted, the solar wind at L1 (speed, density, temperature, Bt, Bz), the alerts, warnings and watches, and the NOAA scales; through SWPC's public JSON files, no key needed.",
+    "keywords": [
+        "science",
+        "space-weather",
+        "aurora",
+        "kp-index",
+        "solar-wind",
+        "noaa",
+        "swpc",
+        "omnilab"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "glitchr/omnilab": "^1.0@dev",
+        "symfony/http-client": "^6.4|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnilab\\Swpc\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnilab\\Swpc\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
