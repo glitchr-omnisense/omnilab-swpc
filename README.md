@@ -1,6 +1,6 @@
 # omnilab/swpc
 
-NOAA's Space Weather Prediction Center for [glitchr/omnilab](https://github.com/glitchr-studio/omnilab):
+NOAA's Space Weather Prediction Center for [omniscient/omnilab](https://github.com/glitchr-studio/omnilab):
 the probability of seeing an aurora overhead at a point, from OVATION's nowcast, as a series - the
 one thing of space weather that is at a place on the Earth - and, outside the contract, the
 planetary Kp index observed and predicted, the solar wind at L1 (speed, density, temperature, the
