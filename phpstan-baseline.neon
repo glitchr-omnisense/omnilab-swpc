@@ -1,0 +1,91 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: SwpcSource.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''T'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: SwpcSource.php
+
+		-
+			message: '#^Binary operation "\." between mixed and ''Z'' results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: SwpcSource.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: SwpcSource.php
+
+		-
+			message: '#^Cannot access offset ''MajorProb'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: SwpcSource.php
+
+		-
+			message: '#^Cannot access offset ''MinorProb'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: SwpcSource.php
+
+		-
+			message: '#^Cannot access offset ''Prob'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: SwpcSource.php
+
+		-
+			message: '#^Cannot access offset ''Scale'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 3
+			path: SwpcSource.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 2
+			path: SwpcSource.php
+
+		-
+			message: '#^Parameter \#1 \$time of static method Omnilab\\Source\\HttpSource\:\:time\(\) expects string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: SwpcSource.php
+
+		-
+			message: '#^Cannot cast mixed to float\.$#'
+			identifier: cast.double
+			count: 1
+			path: SwpcSourceFactory.php
+
+		-
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
+			count: 1
+			path: SwpcSourceFactory.php
+
+		-
+			message: '#^Cannot call method format\(\) on DateTimeImmutable\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: Tests/SwpcSourceTest.php
+
+		-
+			message: '#^Match expression does not handle remaining value\: string$#'
+			identifier: match.unhandled
+			count: 1
+			path: Tests/SwpcSourceTest.php
+
+		-
+			message: '#^Method Omnilab\\Swpc\\Timeline\:\:getIterator\(\) return type with generic class ArrayIterator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: Timeline.php

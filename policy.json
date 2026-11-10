@@ -1,0 +1,40 @@
+{
+    "$schema": "https://github.com/glitchr-omnisense/contracts/blob/1.x/resources/usage-policy.schema.json",
+    "provider": "swpc",
+    "rateLimits": null,
+    "concurrency": null,
+    "rights": {
+        "commercial": "allowed",
+        "openSourceRequired": null,
+        "caching": {
+            "permission": "allowed",
+            "maxTtl": null
+        },
+        "storage": "allowed",
+        "redistribution": "allowed",
+        "attribution": {
+            "required": false,
+            "text": "NOAA Space Weather Prediction Center",
+            "url": "https://www.swpc.noaa.gov/",
+            "where": [
+                "source"
+            ]
+        },
+        "licence": "US public domain (17 U.S.C. 105)"
+    },
+    "requirements": {
+        "key": false,
+        "userAgent": {
+            "required": false,
+            "pattern": null
+        }
+    },
+    "provenance": {
+        "terms": "https://www.weather.gov/disclaimer",
+        "policy": "https://www.weather.gov/disclaimer",
+        "verifiedAt": "2026-11-10",
+        "declaredBy": "maintainer",
+        "contact": "sdm@noaa.gov",
+        "notes": "Read 2026-11-10: the NWS disclaimer (SWPC is part of the NWS; www.swpc.noaa.gov now redirects to www.spaceweather.gov, whose /disclaimers page answers 404 and whose footer links the weather.gov disclaimer). NWS web information is in the public domain unless noted otherwise and may be used without charge for any lawful purpose, without claiming it as one's own, implying endorsement, or presenting modified content as official. No rate limit; guidelines: match requests to the data's refresh frequency, request only what is needed, retry an unavailable service at 1-minute intervals; NWS may block IP addresses or query types (contact sdm@noaa.gov). Credit is not required."
+    }
+}

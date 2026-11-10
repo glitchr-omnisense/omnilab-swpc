@@ -48,6 +48,17 @@ nowcast); SWPC publishes no rate: the source reads a file once per call, and a c
 what it reads rather than poll faster than the files change (a minute for the solar wind, five
 for the aurora, three hours for the Kp index).
 
+## Usage policy
+
+Declared as data in [`policy.json`](policy.json) (read at https://www.weather.gov/disclaimer on 2026-11-10), and honoured on every request by the
+core: a limit reached waits when its window ends within `max_wait` seconds, else the request is not
+sent ([Usage policies](https://github.com/glitchr-omnisense/omnilab/blob/1.x/docs/policies.md)).
+
+- Limits: not published (unknown).
+- Licence: US public domain (17 U.S.C. 105); commercial use: allowed.
+- Credit: not required: NOAA Space Weather Prediction Center (https://www.swpc.noaa.gov/).
+- Needs: nothing.
+
 ## Responsibility
 
 This package is an independent, unofficial client: it is not affiliated with, endorsed by or
