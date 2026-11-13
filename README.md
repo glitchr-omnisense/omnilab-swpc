@@ -39,6 +39,37 @@ answers `series()`.
 
 See [docs/](docs/index.md) for what is read, how it maps, and what the files do not give here.
 
+## Install and a first call
+
+```sh
+composer require omnilab/swpc
+```
+
+A real call, with no account and no key: the aurora probability over Fairbanks now, from NOAA's
+Space Weather Prediction Center. `mailto` is your address, sent in the User-Agent so that the
+service can reach you before it blocks a caller; the source keeps to the limits its
+[`policy.json`](policy.json) declares.
+
+```php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Omnilab\Model\Point;
+use Omnilab\Source\SeriesQuery;
+use Omnilab\Swpc\SwpcSourceFactory;
+
+$swpc = (new SwpcSourceFactory())->create(['mailto' => 'you@example.org']);   // your address, in the User-Agent
+[$aurora] = $swpc->series(new SeriesQuery(['aurora'], new Point(64.84, -147.72)));
+echo 'Aurora over Fairbanks: ', $aurora->values()[0], ' ', $aurora->unit, "\n";
+```
+
+Its output on 2026-11-13 (it changes with the day):
+
+```
+Aurora over Fairbanks: 13 %
+```
+
 ## Terms of use
 
 SWPC's products are NOAA's, in the U.S. public domain; credit NOAA's Space Weather Prediction
